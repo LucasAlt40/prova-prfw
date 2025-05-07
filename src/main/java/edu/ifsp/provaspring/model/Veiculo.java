@@ -8,6 +8,7 @@ import lombok.Data;
 public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "veiculo_id")
     private int id;
 
     private String placa;
@@ -15,6 +16,6 @@ public class Veiculo {
     private String cor;
 
     @ManyToOne(targetEntity = Tipo.class)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "tipo_id")
     private Tipo tipo_veiculo;
 }

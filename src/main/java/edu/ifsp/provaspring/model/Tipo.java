@@ -10,6 +10,7 @@ import java.util.List;
 public class Tipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "tipo_id")
     private int id;
 
     private String tipo;
@@ -17,6 +18,6 @@ public class Tipo {
     private Double preco_hora;
 
     @OneToMany(targetEntity = Veiculo.class)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "veiculo_id")
     private List<Veiculo> veiculos;
 }
