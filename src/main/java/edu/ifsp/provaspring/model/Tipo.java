@@ -1,12 +1,14 @@
 package edu.ifsp.provaspring.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-@Entity
+@Entity()
+@Table(name = "tipo_veiculos")
 public class Tipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
