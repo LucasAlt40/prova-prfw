@@ -15,7 +15,5 @@ public class Veiculo {
     private String modelo;
     private String cor;
 
-    @ManyToOne(targetEntity = Tipo.class)
-    @JoinColumn(name = "tipo_id")
-    private Tipo tipo_veiculo;
+
 }
