@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Veiculo</title>
+</head>
+<body>
+
+<h1> cadastro de veiculos </h1>
+
+<form method="post" th:action="@{/veiculo/cadastrar}" th:object="${veiculo}">
+
+    <label for="placa">Placa: </label>
+    <input type="text" th:field="*{placa}">
+
+    <br>
+    <br>
+    <label for="modelo">Modelo:  </label>
+    <input type="text" th:field="*{modelo}">
+
+
+    <br>
+    <br>
+    <label for="cor">Cor: </label>
+    <input type="text" th:field="*{cor}">
+
+    <br>
+    <br>
+    <label for="tipo_veiculo"> Tipo Veiculo  </label>
+    <select>
+        <option> carro </option>
+        <option> moto </option>
+        <option> caminhao </option>
+    </select>
+
+    <button type="submit"> enviar </button>
+
+</form>
+</body>
+</html>
